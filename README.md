@@ -1,6 +1,11 @@
 # OMDB App 
 
-## Start App Using `npm start`
+
+## Run App on local machine 
+
+### Install Node modules `npm install`
+
+### Start App Using `npm start`
 
 
 Runs the app in the development mode
