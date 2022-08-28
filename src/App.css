@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+	width: 0;
+    background: transparent;
+}
+body {
+	background: #1d1b32;
+	color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+.image-container {
+	position: relative;
+	width: fit-content;
+	transition: transform 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container:hover .overlay {
+	opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 93%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;	
 }
+.banner{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	text-align: center;
+	background: #ffffff;
+}
+.banner-text{
+	padding: 10px;
+	margin: 0 auto;
+	text-align: center;
+	width:400px;
+	background-color: red;
+	color: #fff
 }
